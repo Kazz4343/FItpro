@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-
+import * as motion from "motion/react-client"
 
 export default function Hero() {
   return (
@@ -11,19 +11,34 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-white text-center px-4 max-w-4xl">
-        <div>
-          <h1 className="text-5xl md:text-7xl font-black font-heading mb-6 leading-tighter">Transform Your Body,{''}<span className="text-primary">Transform Your Life</span></h1>
-          <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed max-w-3xl">
+        <motion.div 
+        
+        >
+          <motion.h1
+          initial={{opacity:0, y:12}}
+          animate={{opacity:1, y:0}}
+          transition={{duration:0.7}}
+          className="text-5xl md:text-7xl font-black font-heading mb-6 leading-tighter">Transform Your Body,<span className="text-primary"> Transform Your Life</span></motion.h1>
+          <motion.p
+          initial={{opacity:0, y:12}}
+          animate={{opacity:1, y:0}}
+          transition={{delay:0.2, duration:0.7}}
+          className="text-xl md:text-2xl mb-8 font-light leading-relaxed max-w-3xl">
             Join our fitness programs and achieve your goals with expert trainers and personalized plans.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </motion.p>
+
+          <motion.div 
+          initial={{opacity:0, y:12}}
+          animate={{opacity:1, y:0}}
+          transition={{delay:0.3, duration:0.7}}
+          className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg font-semibold transition-transform duration-300 hover:scale-105 px-8">Start Free Trial</Button>
             <Button variant={'outline'} size="lg" className="bg-transparent text-lg font-semibold transition-transform duration-300 hover:scale-105 px-8" >View Plans</Button>
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
       </div>
-      {/* deleted -translate-x-2 and left-1/2 */}
+      {/* bouncing mouse icon */}
       <div className="absolute bottom-8  animate-bounce">
         <div className="w-6 h-10 border-2 border-primary-foreground rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary-foreground rounded-full mt-2 animate-pulse"></div>
