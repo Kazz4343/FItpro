@@ -1,7 +1,9 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Programs from "@/components/Programs";
-import { Button } from "@/components/ui/button";
+import Review from "@/components/Review";
+import Sellingpoint from "@/components/Sellingpoint";
+
 
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Programs />
+      <Sellingpoint />
+      <Review />
     </main>
   )
 }

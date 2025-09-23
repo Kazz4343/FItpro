@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} font-poppins antialiased`}>
+        className={`${oswald.variable} font-oswald antialiased`}>
 
         {children}
       </body>
