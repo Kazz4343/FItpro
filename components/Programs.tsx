@@ -25,61 +25,44 @@ export default function Programs() {
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {programs.map((item, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.3,
-                ease: "easeOut",
-                
-              }}
-              whileHover={{ scale: 1.02 }}
-              key={index}
-              className="group cursor-pointer "
-            >
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{duration: 0.3,ease: "easeOut", delay: index * 0.1}}
+            whileHover={{ scale: 1.02 }}
+            key={index}
+            className="group cursor-pointer ">
               <Card className="p-0 transition-shadow duration-300 hover:shadow-2xl h-full">
                 <div className="relative overflow-hidden rounded-t-lg w-full h-60 md:h-56 lg:h-40">
                   <Image
                     src={item.image}
                     fill
                     alt={item.title}
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"/>
                 </div>
 
                 <CardContent className="p-6 pt-0 flex flex-col flex-grow">
                   <motion.h3
-                    initial={{ opacity: 0, y: 8 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      ease: "easeOut",
-                      delay: index * 0.2,
-                    }}
-                    className="text-xl font-bold font-heading mb-3 text-foreground group-hover:text-primary transition-colors"
-                  >
+                  initial={{ opacity: 0, y: 8 }}                    
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{duration: 0.5,ease: "easeOut",delay: index * 0.1,}}
+                  className="text-xl font-bold font-heading mb-3 text-foreground group-hover:text-primary transition-colors">
                     {item.title}
                   </motion.h3>
                   <motion.p
-                    initial={{ opacity: 0, y: 6 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      ease: "easeOut",
-                      delay: index * 0.3,
-                    }}
-                    className="text-muted-foreground mb-4 leading-relaxed"
-                  >
+                  initial={{ opacity: 0, y: 6 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{duration: 0.5,ease: "easeOut",delay: index * 0.1,}}
+                  className="text-muted-foreground mb-4 leading-relaxed">
                     {item.description}
                   </motion.p>
 
                   <div className="mt-auto">
                     <Button
-                      variant="outline"
-                      className="w-full transition-colors duration-300 group-hover:bg-primary dark:group-hover:bg-primary group-hover:text-primary-foreground"
-                    >
+                    variant="outline"
+                    className="w-full transition-colors duration-300 group-hover:bg-primary dark:group-hover:bg-primary group-hover:text-primary-foreground">
                       Learn more
                     </Button>
                   </div>

@@ -2,7 +2,8 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Programs from "@/components/Programs";
 import Review from "@/components/Review";
-import Sellingpoint from "@/components/Sellingpoint";
+import Benefit from "@/components/Benefit"
+import Pricing from "@/components/Pricing";
 
 
 
@@ -12,8 +13,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Programs />
-      <Sellingpoint />
+      <Benefit />
       <Review />
+      <Pricing />
     </main>
   )
 }

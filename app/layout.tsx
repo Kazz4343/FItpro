@@ -2,19 +2,21 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 
+
 const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-})
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const oswald = Oswald({
-    subsets: ['latin'],
-    variable: '--font-oswald',
-})
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "FitPro || Transform your life",
-  description: "Join our fitness programs and achieve your goals with expert trainers and personalized plans. Start your transformation today.",
+  title: "FitPro || Transform Your Body, Transform Your Life",
+  description:
+    "Join our fitness programs and achieve your goals with expert trainers and personalized plans. Start your transformation today.",
 };
 
 export default function RootLayout({
@@ -23,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${oswald.variable} font-oswald antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${oswald.variable} antialiased`}>
 
-        {children}
+          {children}
+
       </body>
     </html>
   );
