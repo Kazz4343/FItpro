@@ -4,6 +4,7 @@ import Programs from "@/components/Programs";
 import Review from "@/components/Review";
 import Benefit from "@/components/Benefit"
 import Pricing from "@/components/Pricing";
+import Footer from "@/components/Footer";
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Benefit />
       <Review />
       <Pricing />
+      <Footer />
     </main>
   )
 }

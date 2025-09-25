@@ -31,7 +31,12 @@ export default function Pricing () {
                 {/* Grid */}
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                     {plans.map((item, index)=>(
-                        <motion.div key={index} className='relative'>
+                        <motion.div 
+                        initial={{ opacity: 0, y: 12, scale: 0.9}}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        key={index} className='relative'>
                             <Card className={`${item.popular ? 'border-primary border-2 ring-1 ring-primary/20' : ''}`}>
                               {item.popular && <Badge className='absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-1'>Most Popular</Badge>}
                               <CardHeader className='text-center p-8 pb-0'>
@@ -65,8 +70,13 @@ export default function Pricing () {
                         </motion.div>
                     ))}
                 </div>
-                <motion.div>
-                  <p>
+                <motion.div 
+                initial={{ opacity: 0, scale:0.9}}
+                whileInView={{ opacity: 1, scale:1}}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className='mt-12 text-center'>
+                  <p className='text-muted-foreground'>
                     All plans include a 7-day free trial. No commitment required.
                   </p>
                 </motion.div>
